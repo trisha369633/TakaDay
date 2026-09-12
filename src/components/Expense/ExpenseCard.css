@@ -1,0 +1,122 @@
+.expense-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 24px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.16);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.expense-card:hover {
+  border-color: rgba(110, 160, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.expense-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expense-card__header h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.expense-card__icon {
+  font-size: 1.2rem;
+}
+
+.expense-card__amount {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin: 14px 0 4px;
+  color: var(--blue-bright);
+  text-shadow: 0 0 24px rgba(110, 200, 255, 0.3);
+}
+
+.expense-card__caption {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.expense-card__list {
+  list-style: none;
+  padding: 16px 0 0;
+  margin: 16px 0 0;
+  border-top: 1px solid var(--glass-border);
+  height: 280px;
+  max-height: 280px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-shrink: 0;
+  scrollbar-color: var(--blue-deep) transparent;
+  scrollbar-width: thin;
+}
+
+.expense-card__list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.expense-card__list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.expense-card__list::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(62, 123, 250, 0.38);
+}
+
+.expense-card__list::-webkit-scrollbar-thumb:hover {
+  background: rgba(110, 200, 255, 0.58);
+}
+
+.expense-card__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.expense-card__item strong {
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.expense-card__description {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.expense-card__amount-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.expense-card__delete {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.expense-card__delete:hover,
+.expense-card__delete:focus-visible {
+  border-color: var(--blue);
+  color: var(--blue-bright);
+  outline: none;
+}

@@ -1,0 +1,86 @@
+.task-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.task-card--defeating {
+  animation: defeat-task 0.8s ease forwards;
+  border-color: var(--blue-bright);
+}
+
+.task-card:hover {
+  border-color: rgba(110, 160, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.task-card__info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.task-card__emoji {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.task-card__label {
+  font-size: 0.98rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-card__button {
+  flex-shrink: 0;
+  background: transparent;
+  border: 1.5px solid var(--blue);
+  color: var(--blue-bright);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  padding: 9px 16px;
+  border-radius: 7px;
+  transition: all 0.2s ease;
+}
+
+.task-card__button:hover {
+  background: var(--blue);
+  color: #030507;
+  box-shadow: 0 0 18px rgba(62, 123, 250, 0.55);
+}
+
+.task-card__button:active {
+  transform: scale(0.96);
+}
+
+.task-card__button:disabled {
+  cursor: wait;
+  color: var(--blue-bright);
+  border-color: var(--blue-bright);
+}
+
+@keyframes defeat-task {
+  0% {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+  }
+  45% {
+    opacity: 1;
+    transform: translateX(12px) rotate(1deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(80px) rotate(4deg);
+  }
+}

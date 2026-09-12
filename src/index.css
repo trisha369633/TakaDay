@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #050609;
+  --bg-elevated: #0b0f1a;
+  --glass: rgba(16, 21, 32, 0.72);
+  --glass-border: rgba(148, 169, 207, 0.14);
+  --blue: #3e7bfa;
+  --blue-bright: #6ec8ff;
+  --blue-deep: #17255c;
+  --text: #f4f6fb;
+  --text-muted: #8b93a7;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  background-image: radial-gradient(
+      circle at 15% 10%,
+      rgba(62, 123, 250, 0.12),
+      transparent 40%
+    ),
+    radial-gradient(circle at 85% 30%, rgba(110, 200, 255, 0.08), transparent 45%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(62, 123, 250, 0.35);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+input {
+  font-family: var(--font-body);
+}

@@ -1,0 +1,46 @@
+.add-task {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.add-task__input {
+  flex: 1;
+  min-width: 180px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.add-task__input:focus {
+  border-color: var(--blue);
+}
+
+.add-task__input::placeholder {
+  color: var(--text-muted);
+}
+
+.add-task__button {
+  background: var(--blue);
+  color: #030507;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.add-task__button:hover {
+  box-shadow: 0 0 20px rgba(62, 123, 250, 0.5);
+}
+
+.add-task__button:active {
+  transform: scale(0.97);
+}

@@ -1,0 +1,70 @@
+.add-expense {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  backdrop-filter: blur(18px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.add-expense__row {
+  display: flex;
+  gap: 10px;
+}
+
+.add-expense__prefix {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.add-expense__input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--text);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.add-expense__input:focus {
+  border-color: var(--blue);
+}
+
+.add-expense__input::placeholder {
+  color: var(--text-muted);
+}
+
+.add-expense__input--amount {
+  width: 90px;
+}
+
+.add-expense__input--desc {
+  flex: 1;
+  min-width: 0;
+}
+
+.add-expense__button {
+  background: transparent;
+  border: 1.5px solid var(--blue);
+  color: var(--blue-bright);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.add-expense__button:hover {
+  background: var(--blue);
+  color: #030507;
+  box-shadow: 0 0 18px rgba(62, 123, 250, 0.5);
+}

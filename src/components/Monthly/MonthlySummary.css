@@ -1,0 +1,116 @@
+.monthly-summary {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 22px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.14);
+}
+
+.monthly-summary__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.monthly-summary__eyebrow {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.monthly-summary__month {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--blue-bright);
+  margin-bottom: 6px;
+}
+
+.monthly-summary__clear {
+  border: 1px solid var(--glass-border);
+  border-radius: 7px;
+  padding: 7px 9px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.monthly-summary__clear:hover:not(:disabled),
+.monthly-summary__clear:focus-visible {
+  border-color: var(--blue);
+  color: var(--blue-bright);
+  outline: none;
+}
+
+.monthly-summary__clear:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.monthly-summary__clear:active,
+.monthly-summary__actions button:active {
+  transform: scale(0.97);
+}
+
+.monthly-summary__total {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.monthly-summary__message {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.monthly-summary__confirmation {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.monthly-summary__confirmation p {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.monthly-summary__confirmation span {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.monthly-summary__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.monthly-summary__actions button {
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  padding: 7px 10px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.monthly-summary__actions button:hover,
+.monthly-summary__actions button:focus-visible {
+  border-color: var(--blue);
+  color: var(--blue-bright);
+  outline: none;
+}
+
+.monthly-summary__actions .monthly-summary__delete {
+  border-color: var(--blue);
+  color: var(--blue-bright);
+}
