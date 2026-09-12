@@ -1,4 +1,5 @@
 .add-expense {
+  min-width: 0;
   background: var(--glass);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius);
@@ -10,6 +11,7 @@
 }
 
 .add-expense__row {
+  min-width: 0;
   display: flex;
   gap: 10px;
 }
@@ -67,4 +69,19 @@
   background: var(--blue);
   color: #030507;
   box-shadow: 0 0 18px rgba(62, 123, 250, 0.5);
+}
+
+@media (max-width: 520px) {
+  .add-expense__row {
+    flex-wrap: wrap;
+  }
+
+  .add-expense__input--amount {
+    flex: 1;
+    width: auto;
+  }
+
+  .add-expense__input--desc {
+    flex-basis: 100%;
+  }
 }

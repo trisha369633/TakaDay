@@ -6,7 +6,7 @@
 
 .add-task__input {
   flex: 1;
-  min-width: 180px;
+  min-width: 0;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--glass-border);
   border-radius: 8px;
@@ -43,4 +43,15 @@
 
 .add-task__button:active {
   transform: scale(0.97);
+}
+
+@media (max-width: 520px) {
+  .add-task {
+    flex-direction: column;
+  }
+
+  .add-task__input,
+  .add-task__button {
+    width: 100%;
+  }
 }

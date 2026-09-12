@@ -1,4 +1,5 @@
 .header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,6 +12,7 @@
 }
 
 .header__brand {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -30,9 +32,11 @@
   color: var(--text-muted);
   font-size: 0.75rem;
   letter-spacing: 0.02em;
+  overflow-wrap: anywhere;
 }
 
 .header__meta {
+  min-width: 0;
   text-align: right;
 }
 
@@ -56,7 +60,13 @@
   }
 
   .header__meta {
+    width: 100%;
+    padding-top: 4px;
     text-align: left;
+  }
+
+  .header__date {
+    white-space: nowrap;
   }
 
   .header__brand-name {

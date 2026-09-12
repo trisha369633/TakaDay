@@ -1,4 +1,5 @@
 .task-card {
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -82,5 +83,35 @@
   100% {
     opacity: 0;
     transform: translateX(80px) rotate(4deg);
+  }
+}
+
+@media (max-width: 520px) {
+  .task-card {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .task-card__button {
+    padding: 9px 12px;
+  }
+
+  .task-card--defeating {
+    animation-name: defeat-task-mobile;
+  }
+}
+
+@keyframes defeat-task-mobile {
+  0% {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+  }
+  45% {
+    opacity: 1;
+    transform: translateX(8px) rotate(1deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(28px) rotate(3deg);
   }
 }
